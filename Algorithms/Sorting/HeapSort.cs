@@ -2,48 +2,45 @@
 
 namespace Algorithms.Sorting
 {
-    public class HeapSort
+    public class HeapSort : Runable
     {
-        public void Run()
+        protected override string ActionName => nameof(HeapSort);
+
+        protected override object DoAction()
         {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine(nameof(HeapSort));
-            Console.ResetColor();
-
             int[] arr = {12, 11, 13, 5, 6, 7};
-
             Sort(arr);
+            return arr;
+        }
 
-            Console.ForegroundColor = ConsoleColor.Green;
-
+        protected override void Display(object value)
+        {
+            var arr = (int[]) value;
             Console.WriteLine("[" + string.Join(",", arr) + "]");
-
-            Console.ResetColor();
-
         }
 
         private void Sort(int[] array)
         {
             int n = array.Length;
 
-            for (int i = n / 2; i >= 0; i--)
+            for (int i = n / 2 - 1; i >= 0; i--)
             {
-                Heapify(array, n, i);
+                Heapify(array, n, i); // find max heap.
             }
 
             for (int i = n - 1; i >= 0; i--)
             {
-                Swap(array, n, i);
+                Helpers.Swap(array, i, 0);
 
                 Heapify(array, i, 0);
             }
         }
 
-        private void Heapify(int[] arr, int n, int i)
+        private void Heapify(int[] arr, int n, int root)
         {
-            int largest = i;
-            int l = 2 * i + 1; // left
-            int r = 2 * i + 2; //right
+            int largest = root;
+            int l = 2 * root + 1; // left
+            int r = 2 * root + 2; //right
 
             if (l < n && arr[l] > arr[largest])
             {
@@ -55,20 +52,13 @@ namespace Algorithms.Sorting
                 largest = r;
             }
 
-            if (largest != i)
+            if (largest != root)
             {
-                Swap(arr, i, largest);
+                Helpers.Swap(arr, root, largest);
 
                 // Recursively heapify the affected sub-tree 
                 Heapify(arr, n, largest);
             }
-        }
-
-        private void Swap(int[] arr, int indexA, int indexB)
-        {
-            int swap = arr[indexA];
-            arr[indexA] = arr[indexB];
-            arr[indexB] = swap;
         }
     }
 }

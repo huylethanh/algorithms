@@ -1,19 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
 using Algorithms.Arrays;
 using Algorithms.Graphs;
 using Algorithms.ReactiveX;
 using Algorithms.Sorting;
 using Algorithms.Strings;
 
-namespace Grapoh
+namespace Algorithms
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            HeapSortTest();
+            BubbleSortTest();
             Console.ReadKey();
+        }
+
+        private static void BubbleSortTest()
+        {
+            var bubbleSort = new BubbleSort();
+            bubbleSort.Run();
         }
 
         private static void HeapSortTest()
