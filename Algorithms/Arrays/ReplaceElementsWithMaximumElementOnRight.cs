@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Grapoh.Arrays
+namespace Algorithms.Arrays
 {
     //Original Array: [2, 5, 1, 6, 3, 4]
     //Output: [6, 6, 6, 0, 4, 0]

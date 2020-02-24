@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace Grapoh.Arrays
+namespace Algorithms.Arrays
 {
     public class UniqueSubsetsWithGivenSum
     {

@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Reactive.Linq;
-using  System.Reactive;
 using System.Threading.Tasks;
 
-namespace Grapoh.ReactiveX
+namespace Algorithms.ReactiveX
 {
     public class SelectTransformation
     {

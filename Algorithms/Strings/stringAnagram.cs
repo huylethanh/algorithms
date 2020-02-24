@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Grapoh.Strings
+namespace Algorithms.Strings
 {
     public class StringAnagram
     {

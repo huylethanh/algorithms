@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Grapoh.Graphs
+namespace Algorithms.Graphs
 {
     public class Graph
     {

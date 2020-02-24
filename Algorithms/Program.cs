@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using Grapoh.Arrays;
-using Grapoh.Graphs;
-using Grapoh.ReactiveX;
-using Grapoh.Strings;
+using Algorithms.Arrays;
+using Algorithms.Graphs;
+using Algorithms.ReactiveX;
+using Algorithms.Sorting;
+using Algorithms.Strings;
 
 namespace Grapoh
 {
@@ -11,8 +12,14 @@ namespace Grapoh
     {
         static void Main(string[] args)
         {
-            GraphArrayTest();
+            HeapSortTest();
             Console.ReadKey();
+        }
+
+        private static void HeapSortTest()
+        {
+            var heapSort = new HeapSort();
+            heapSort.Run();
         }
 
         private static void SelectTransformationTest()

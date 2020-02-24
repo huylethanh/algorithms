@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Grapoh.Graphs
+namespace Algorithms.Graphs
 {
     public class GraphArray
     {

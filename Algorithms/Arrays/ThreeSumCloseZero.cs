@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Grapoh.Arrays
+namespace Algorithms.Arrays
 {
     public class ThreeSumCloseZero
     {
