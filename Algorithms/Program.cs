@@ -11,8 +11,20 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            BubbleSortTest();
+            MergeSortTest();
             Console.ReadKey();
+        }
+
+        private static void MergeSortTest()
+        {
+            var sort = new MergeSort();
+            sort.Run();
+        }
+        
+        private static void SelectionSortTest()
+        {
+            var selectionSort = new SelectionSort();
+            selectionSort.Run();
         }
 
         private static void BubbleSortTest()
