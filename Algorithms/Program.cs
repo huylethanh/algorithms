@@ -11,8 +11,14 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            MergeSortTest();
+            InsertionSortTest();
             Console.ReadKey();
+        }
+
+        private static void InsertionSortTest()
+        {
+            var sort = new InsertionSort();
+            sort.Run();
         }
 
         private static void MergeSortTest()
