@@ -8,7 +8,8 @@ namespace Algorithms.Sorting
 
         protected override object DoAction()
         {
-            int[] arr = {12, 11, 13, 5, 6, 7};
+            //   int[] arr = {3, 5, 8, 1, 2, 9, 4, 7, 6};
+            int[] arr = {10, 80, 30, 90, 40, 50, 70};
 
             Sort(arr);
 
@@ -18,7 +19,7 @@ namespace Algorithms.Sorting
         protected override void Display(object value)
         {
             var arr = (int[]) value;
-            Console.WriteLine("[" + string.Join(",", arr) + "]");
+            Console.WriteLine("[" + string.Join(", ", arr) + "]");
         }
 
         private void Sort(int[] arr)
@@ -26,23 +27,23 @@ namespace Algorithms.Sorting
             Sort(arr, 0, arr.Length - 1);
         }
 
-        private void Sort(int[] arr, int low, int hight)
+        private void Sort(int[] arr, int left, int right)
         {
-            if (low < hight)
+            if (left < right)
             {
-                int pi = Partition(arr, low, hight);
-                Sort(arr, low, pi - 1);
-                Sort(arr, pi + 1, hight);
+                int pi = Partition(arr, left, right);
+                Sort(arr, left, pi - 1);
+                Sort(arr, pi + 1, right);
             }
         }
 
-        private int Partition(int[] arr, int low, int hight)
+        private int Partition(int[] arr, int left, int right)
         {
-            int pivot = arr[hight];
+            int pivot = arr[right];
 
-            int i = low - 1;
+            int i = left - 1;
 
-            for (int j = low; j < hight; j++)
+            for (int j = left; j < right; j++)
             {
                 if (arr[j] <= pivot)
                 {
@@ -51,9 +52,7 @@ namespace Algorithms.Sorting
                 }
             }
 
-            int temp = arr[i + 1];
-            arr[i + 1] = arr[hight];
-            arr[hight] = temp;
+            Helpers.Swap(arr, i + 1, right); // swap pivot element
 
             return i + 1;
         }
