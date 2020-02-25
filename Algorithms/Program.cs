@@ -11,8 +11,14 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            InsertionSortTest();
+            QuickSortTest();
             Console.ReadKey();
+        }
+
+        private static void QuickSortTest()
+        {
+            var sort = new QuickSort();
+            sort.Run();
         }
 
         private static void InsertionSortTest()
