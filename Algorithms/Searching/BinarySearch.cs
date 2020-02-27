@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Text;
-using Algorithms.Sorting;
+﻿using Algorithms.Sorting;
+using System;
 
 namespace Algorithms.Searching
 {
@@ -20,34 +17,36 @@ namespace Algorithms.Searching
         protected override object DoAction()
         {
             int[] arr = {12, 11, 13, 5, 6, 7};
-
-            return Search(arr, 5);
+            _quickSort.Sort(arr);
+            var searchItem = 11;
+            Console.WriteLine("Sorted array: [" + string.Join(",", arr) + "]");
+            Console.WriteLine($"search value: {searchItem}");
+            return Search(arr, searchItem);
         }
 
         protected override void Display(object value)
         {
-            var found = (bool) value;
-            Console.WriteLine(found ? "found" : "not found");
+            var index = (int) value;
+            Console.WriteLine($"Found at index -> {index}");
         }
 
 
-        private bool Search(int[] arr, int searchItem)
+        private int Search(int[] arr, int searchItem)
         {
-            _quickSort.Sort(arr);
             return Search(arr, searchItem, 0, arr.Length - 1);
         }
 
-        private bool Search(int[] arr, int searchItem, int leftIndex, int rightIndex)
+        private int Search(int[] arr, int searchItem, int leftIndex, int rightIndex)
         {
             if (leftIndex > rightIndex)
             {
-                return true;
+                return -1;
             }
 
-            var mid = (rightIndex - leftIndex) / 2;
+            var mid = (rightIndex + leftIndex) / 2;
             if (searchItem == arr[mid])
             {
-                return true;
+                return mid;
             }
 
             if (searchItem > arr[mid])
