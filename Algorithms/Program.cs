@@ -2,6 +2,7 @@
 using Algorithms.Arrays;
 using Algorithms.Graphs;
 using Algorithms.ReactiveX;
+using Algorithms.Searching;
 using Algorithms.Sorting;
 using Algorithms.Strings;
 
@@ -11,9 +12,16 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            QuickSortTest();
+            BinarySearchTest();
             Console.ReadKey();
         }
+
+        private static void BinarySearchTest()
+        {
+            var sort = new BinarySearch();
+            sort.Run();
+        }
+
 
         private static void QuickSortTest()
         {

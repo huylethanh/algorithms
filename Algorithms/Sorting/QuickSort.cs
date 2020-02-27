@@ -22,7 +22,7 @@ namespace Algorithms.Sorting
             Console.WriteLine("[" + string.Join(", ", arr) + "]");
         }
 
-        private void Sort(int[] arr)
+        public void Sort(int[] arr)
         {
             Sort(arr, 0, arr.Length - 1);
         }
