@@ -18,9 +18,7 @@ namespace Algorithms.LeetCode
 
         protected override object DoAction()
         {
-            var inputs = new int[] { 123, 1234, 12345, 123456, 1234567, 1234567891, 1000010 };
-            //var inputs = new int[] { 1000010 };
-            
+            var inputs = new int[] { 9999999, 123, 1234, 12345, 123456, 1234567, 1234567891, 1000010, 110, 10, 1000, 11000, 101, 1000000, 10000010 };
             var output = new List<string>();
 
             foreach (var item in inputs)
@@ -34,6 +32,11 @@ namespace Algorithms.LeetCode
 
         private string ConvertNumberToWords(int num)
         {
+            if(num==0)
+            {
+                return string.Empty;
+            }
+
             var builder = new StringBuilder();
             var devider = 10;
 
@@ -49,11 +52,7 @@ namespace Algorithms.LeetCode
                 {
                     devider = GetDivider(num);
                     var a = num / devider;
-
-                    if (a > 0)
-                    {
-                        num %= devider;
-                    }
+                    num %= devider;
 
                     if (devider == 10)
                     {
@@ -79,7 +78,7 @@ namespace Algorithms.LeetCode
 
         private int GetDivider(int num)
         {
-            if (num >= 10 && num < 100)
+            if (num < 100)
             {
                 return 10;
             }
