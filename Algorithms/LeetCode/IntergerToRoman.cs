@@ -57,6 +57,8 @@ namespace Algorithms.LeetCode
 
             var watcher = new Stopwatch();
             var begin = watcher.ElapsedTicks;
+
+            output.Add("----------------ConvertIntergerToRoman--------------------------");
             watcher.Start();
 
             foreach (var item in inputs)
@@ -70,7 +72,7 @@ namespace Algorithms.LeetCode
 
             output.Add($"Tooks {end - begin} ticks");
 
-            output.Add("------------------------------------------");
+            output.Add("----------------OtherConvertIntergerToRoman--------------------------");
 
             watcher.Reset();
             begin = watcher.ElapsedTicks;
@@ -78,7 +80,7 @@ namespace Algorithms.LeetCode
 
             foreach (var item in inputs)
             {
-                var result = Other(item);
+                var result = OtherConvertIntergerToRoman(item);
                 output.Add($"{item} => {result}");
             }
 
@@ -93,7 +95,7 @@ namespace Algorithms.LeetCode
         {
             var buider = new StringBuilder();
             var devider = 1000;
-            string roman = "";
+            
             while (devider > 0)
             {
                 var a = num / devider;
@@ -110,7 +112,7 @@ namespace Algorithms.LeetCode
             return buider.ToString();
         }
 
-        private string Other(int num)
+        private string OtherConvertIntergerToRoman(int num)
         {
             string roman = "";
             for (int i = 0; i < values.Length; i++)
