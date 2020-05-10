@@ -21,9 +21,6 @@ namespace Algorithms.LeetCode
     
     public class ClimbStairs : Runable
     {
-        private int Max = 2;
-        private int Min = 1;
-
         protected override string ActionName => nameof(ClimbStairs);
 
         protected override void Display(object value)
