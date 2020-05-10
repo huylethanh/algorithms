@@ -32,7 +32,7 @@ namespace Algorithms.LeetCode
 
         private string ConvertNumberToWords(int num)
         {
-            if(num==0)
+            if (num == 0)
             {
                 return string.Empty;
             }
