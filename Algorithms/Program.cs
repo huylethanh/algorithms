@@ -1,6 +1,7 @@
 ﻿using System;
 using Algorithms.Arrays;
 using Algorithms.Graphs;
+using Algorithms.LeetCode;
 using Algorithms.ReactiveX;
 using Algorithms.Searching;
 using Algorithms.Sorting;
@@ -12,8 +13,20 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            BinarySearchTest();
+            IntergerToRoman();
             Console.ReadKey();
+        }
+
+        private static void IntergerToRoman()
+        {
+            var c = new IntergerToRoman();
+            c.Run();
+        }
+
+        private static void RomanToInterger()
+        {
+            var c = new RomanToInterger();
+            c.Run();
         }
 
         private static void BinarySearchTest()

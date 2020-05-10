@@ -9,8 +9,4 @@
     <PackageReference Include="System.Reactive.Linq" Version="4.3.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="LeetCode\" />
-  </ItemGroup>
-
 </Project>
