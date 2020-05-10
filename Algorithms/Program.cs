@@ -13,8 +13,14 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            IntergerToRoman();
+            IntegerToEnglishWords();
             Console.ReadKey();
+        }
+
+        private static void IntegerToEnglishWords()
+        {
+            var c = new NumberToWords();
+            c.Run();
         }
 
         private static void IntergerToRoman()
