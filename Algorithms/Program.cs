@@ -13,13 +13,19 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            IntegerToEnglishWords();
+            ClimbStairs();
 
             //IntergerToRoman();
 
             //RomanToInterger();
 
             Console.ReadKey();
+        }
+
+        private static void ClimbStairs()
+        {
+            var c = new ClimbStairs();
+            c.Run();
         }
 
         private static void IntegerToEnglishWords()
