@@ -33,7 +33,6 @@ namespace Algorithms.LeetCode
 
         protected override object DoAction()
         {
-            var inputs = new List<int> { 2, 3, 4, 5, 6, 7, 8, 9, };
             var outputs = new List<string>();
 
             for (int i = 2; i < 10; i++)
