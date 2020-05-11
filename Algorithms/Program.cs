@@ -13,11 +13,17 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            IntegerToEnglishWords();
+            // IntegerToEnglishWords();
             //IntergerToRoman();
             //RomanToInterger();
-
+            ReverseVowels();
             Console.ReadKey();
+        }
+
+        private static void ReverseVowels()
+        {
+            var c = new ReverseVowels();
+            c.Run();
         }
 
         private static void ClimbStairs()
