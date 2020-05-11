@@ -17,8 +17,14 @@ namespace Algorithms
             //RomanToInterger();
             //ReverseVowels();
             //SingleNumber();
-            FindDuplicate();
+            FirstMissingPositive();
             Console.ReadKey();
+        }
+
+        private static void FirstMissingPositive()
+        {
+            var c = new FirstMissingPositive();
+            c.Run();
         }
 
         private static void FindDuplicate()
