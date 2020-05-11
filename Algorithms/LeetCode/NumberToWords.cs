@@ -18,7 +18,8 @@ namespace Algorithms.LeetCode
 
         protected override object DoAction()
         {
-            var inputs = new int[] { 9999999, 123, 1234, 12345, 123456, 1234567, 1234567891, 1000010, 110, 10, 1000, 11000, 101, 1000000, 10000010 };
+            var inputs = new int[] {111, 1111, 99, 35, 56, 9999999, 123, 1234, 12345, 123456, 1234567, 1234567891, 1000010, 110, 10, 1000, 11000, 101, 1000000, 10000010};
+          
             var output = new List<string>();
 
             foreach (var item in inputs)
@@ -38,9 +39,8 @@ namespace Algorithms.LeetCode
             }
 
             var builder = new StringBuilder();
-            var devider = 10;
 
-            while (devider > 1)
+            while (num > 0)
             {
                 var name = NumberDefine(num);
                 if (!string.IsNullOrWhiteSpace(name))
@@ -48,29 +48,21 @@ namespace Algorithms.LeetCode
                     builder.Append(name);
                     break;
                 }
-                else
-                {
-                    devider = GetDivider(num);
-                    var a = num / devider;
-                    num %= devider;
 
-                    if (devider == 10)
-                    {
-                        builder.Append(NumberDefine(a * devider));
-                        builder.Append(NumberDefine(num));
-                    }
-                    else
-                    {
-                        if (a > 0)
-                        {
-                            var result = ConvertNumberToWords(a);
-                            builder.Append(result);
-                            builder.Append(NumberDefine(devider));
-                        }
-                    }
+                var devider = GetDivider(num);
+                var divi = num / devider;
+                num %= devider;
+
+                if (devider == 10)
+                {
+                    builder.Append(NumberDefine(divi * devider));
+                    builder.Append(NumberDefine(num));
+                    break;
                 }
 
-                devider = devider / 10;
+                var result = ConvertNumberToWords(divi);
+                builder.Append(result);
+                builder.Append(NumberDefine(devider));
             }
 
             return builder.ToString();

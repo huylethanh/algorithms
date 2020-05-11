@@ -13,7 +13,8 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            ClimbStairs();
+            IntegerToEnglishWords();
+            //ClimbStairs();
 
             //IntergerToRoman();
 
