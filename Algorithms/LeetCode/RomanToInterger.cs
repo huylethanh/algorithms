@@ -45,7 +45,7 @@ namespace Algorithms.LeetCode
 
         protected override object DoAction()
         {
-            var inputs = new string[] { "LVIII", "iii", "iv", "xiv", "MCMXCIV", "v", "XX", "XIX" };
+            var inputs = new string[] { "LVIII", "iii", "iv", "xiv", "MCMXCIV", "v", "XX", "XIX" , "mxciv"};
             var output = new List<string>();
 
             foreach (var item in inputs)
