@@ -5,7 +5,6 @@ using Algorithms.LeetCode;
 using Algorithms.ReactiveX;
 using Algorithms.Searching;
 using Algorithms.Sorting;
-using Algorithms.Strings;
 
 namespace Algorithms
 {
@@ -16,8 +15,22 @@ namespace Algorithms
             // IntegerToEnglishWords();
             //IntergerToRoman();
             //RomanToInterger();
-            ReverseVowels();
+            //ReverseVowels();
+            //SingleNumber();
+            FindDuplicate();
             Console.ReadKey();
+        }
+
+        private static void FindDuplicate()
+        {
+            var c = new FindDuplicate();
+            c.Run();
+        }
+
+        private static void SingleNumber()
+        {
+            var c = new SingleNumber();
+            c.Run();
         }
 
         private static void ReverseVowels()

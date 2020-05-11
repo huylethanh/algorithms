@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Algorithms.Strings
+namespace Algorithms.LeetCode
 {
     public class StringAnagram
     {
