@@ -18,8 +18,8 @@ namespace Algorithms.LeetCode
 
         protected override object DoAction()
         {
-            var inputs = new int[] {111, 1111, 99, 35, 56, 9999999, 123, 1234, 12345, 123456, 1234567, 1234567891, 1000010, 110, 10, 1000, 11000, 101, 1000000, 10000010};
-          
+            var inputs = new int[] {80, 0,100, 10000, 10000000, 101001, 111, 1111, 99, 35, 56, 9999999, 123, 1234, 12345, 123456, 1234567, 1234567891, 1000010, 110, 10, 1000, 11000, 101, 1000000, 10000010};
+           // var inputs = new int[] { 1100 };
             var output = new List<string>();
 
             foreach (var item in inputs)
@@ -35,22 +35,38 @@ namespace Algorithms.LeetCode
         {
             if (num == 0)
             {
-                return string.Empty;
+                return NumberDefine(0);
             }
 
             var builder = new StringBuilder();
+            DoNumberToWords(num, builder);
+            return builder.ToString().Trim();
+        }
+
+        private void DoNumberToWords(int num, StringBuilder builder)
+        {
+            if (num == 0)
+            {
+                return;
+            }
 
             while (num > 0)
             {
                 var name = NumberDefine(num);
+                var devider = GetDivider(num);
+                var divi = num / devider;
+
                 if (!string.IsNullOrWhiteSpace(name))
                 {
+                    if (num >= 100)
+                    {
+                        builder.Append(NumberDefine(divi));
+                    }
+
                     builder.Append(name);
                     break;
                 }
 
-                var devider = GetDivider(num);
-                var divi = num / devider;
                 num %= devider;
 
                 if (devider == 10)
@@ -60,12 +76,9 @@ namespace Algorithms.LeetCode
                     break;
                 }
 
-                var result = ConvertNumberToWords(divi);
-                builder.Append(result);
+                DoNumberToWords(divi, builder);
                 builder.Append(NumberDefine(devider));
             }
-
-            return builder.ToString();
         }
 
         private int GetDivider(int num)
@@ -97,6 +110,9 @@ namespace Algorithms.LeetCode
         {
             switch (num)
             {
+                case 0:
+                    return "Zero ";
+
                 case 1:
                     return "One ";
 
@@ -134,19 +150,34 @@ namespace Algorithms.LeetCode
                     return "Twelve ";
 
                 case 13:
-                    return "ThirdTeen ";
+                    return "Thirteen ";
+
+                case 14:
+                    return "Fourteen ";
 
                 case 15:
                     return "Fifteen ";
+
+                case 16:
+                    return "Sixteen ";
+
+                case 17:
+                    return "Seventeen ";
+
+                case 18:
+                    return "Eighteen ";
+
+                case 19:
+                    return "Nineteen ";
 
                 case 20:
                     return "Twenty ";
 
                 case 30:
-                    return "Thirdty ";
+                    return "Thirty ";
 
                 case 40:
-                    return "Fourty ";
+                    return "Forty ";
 
                 case 50:
                     return "Fifty ";
@@ -158,7 +189,7 @@ namespace Algorithms.LeetCode
                     return "Seventy ";
 
                 case 80:
-                    return "Eightty ";
+                    return "Eighty ";
 
                 case 90:
                     return "Ninety ";
@@ -169,23 +200,11 @@ namespace Algorithms.LeetCode
                 case 1000:
                     return "Thousand ";
 
-                case 10000:
-                    return "Ten Thousand ";
-
-                case 100000:
-                    return "Hundred Thousand ";
-
                 case 1000000:
-                    return "Milion ";
-
-                case 10000000:
-                    return "Ten milion ";
-
-                case 100000000:
-                    return "Hunderd milion ";
+                    return "Million ";
 
                 case 1000000000:
-                    return "Bilion ";
+                    return "Billion ";
 
                 default:
                     return "";

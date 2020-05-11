@@ -14,8 +14,8 @@ namespace Algorithms
         static void Main(string[] args)
         {
             IntegerToEnglishWords();
-            IntergerToRoman();
-            RomanToInterger();
+            //IntergerToRoman();
+            //RomanToInterger();
 
             Console.ReadKey();
         }
