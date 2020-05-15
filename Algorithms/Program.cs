@@ -12,13 +12,27 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            // IntegerToEnglishWords();
+            //IntegerToEnglishWords();
             //IntergerToRoman();
             //RomanToInterger();
             //ReverseVowels();
             //SingleNumber();
-            FirstMissingPositive();
+            //FirstMissingPositive();
+            //TwoSum();
+            ShortestPalindrome();
             Console.ReadKey();
+        }
+
+        private static void ShortestPalindrome()
+        {
+            var c = new ShortestPalindrome();
+            c.Run();
+        }
+
+        private static void TwoSum()
+        {
+            var c = new TwoSum();
+            c.Run();
         }
 
         private static void FirstMissingPositive()
