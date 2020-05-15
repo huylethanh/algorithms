@@ -22,7 +22,7 @@ namespace Algorithms.LeetCode
         protected override object DoAction()
         {
             var inputs = new List<string>() { "abcde", "aacecaaa", "abcd" };
-       
+
             var output = new List<string>();
 
             foreach (var item in inputs)

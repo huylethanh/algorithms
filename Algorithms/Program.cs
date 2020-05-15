@@ -19,8 +19,16 @@ namespace Algorithms
             //SingleNumber();
             //FirstMissingPositive();
             //TwoSum();
-            ShortestPalindrome();
+            //ShortestPalindrome();
+            //NumberSubsetWithProductLessThanK();
+            CombinationSum3();
             Console.ReadKey();
+        }
+
+        private static void CombinationSum3()
+        {
+            var c = new CombinationSum3();
+            c.Run();
         }
 
         private static void ShortestPalindrome()
@@ -83,74 +91,74 @@ namespace Algorithms
             c.Run();
         }
 
-        private static void BinarySearchTest()
+        private static void BinarySearch()
         {
             var sort = new BinarySearch();
             sort.Run();
         }
 
 
-        private static void QuickSortTest()
+        private static void QuickSort()
         {
             var sort = new QuickSort();
             sort.Run();
         }
 
-        private static void InsertionSortTest()
+        private static void InsertionSort()
         {
             var sort = new InsertionSort();
             sort.Run();
         }
 
-        private static void MergeSortTest()
+        private static void MergeSort()
         {
             var sort = new MergeSort();
             sort.Run();
         }
         
-        private static void SelectionSortTest()
+        private static void SelectionSort()
         {
             var selectionSort = new SelectionSort();
             selectionSort.Run();
         }
 
-        private static void BubbleSortTest()
+        private static void BubbleSort()
         {
             var bubbleSort = new BubbleSort();
             bubbleSort.Run();
         }
 
-        private static void HeapSortTest()
+        private static void HeapSort()
         {
             var heapSort = new HeapSort();
             heapSort.Run();
         }
 
-        private static void SelectTransformationTest()
+        private static void SelectTransformation()
         {
             var abc = new SelectTransformation();
             abc.Run();
         }
 
-        private static void ReplaceElementsWithMaximumElementOnRightTest()
+        private static void ReplaceElementsWithMaximumElementOnRight()
         {
             var abc = new ReplaceElementsWithMaximumElementOnRight();
             abc.Run();
         }
 
-        private static void FindNumberSubsetWithProductLessThanKTest()
+        private static void NumberSubsetWithProductLessThanK()
         {
             var arr = new NumberSubsetWithProductLessThanK();
             arr.Run();
         }
 
-        private static void FindUniqueSubsetsWithGivenSumTest()
+        private static void UniqueSubsetsWithGivenSum()
         {
             var arr = new UniqueSubsetsWithGivenSum();
             arr.Run();
         }
 
-        private static void ThreeSumCloseZerest()
+        private static void ThreeSumCloseZero()
         {
             var arr = new ThreeSumCloseZero();
             arr.Run();
