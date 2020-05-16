@@ -69,50 +69,6 @@ namespace Algorithms.LeetCode
             return subString;
         }
 
-        public int OtherLengthOfLongestSubstring(String s)
-        {
-            int n = s.Length;
-            int ans = 0;
-            for (int i = 0; i < n; i++)
-            {
-                for (int j = i + 1; j <= n; j++)
-                {
-                    if (allUnique(s, i, j))
-                    {
-                        ans = Math.Max(ans, j - i);
-                    }
-                }
-            }
-            return ans;
-        }
-
-        public bool allUnique(String s, int start, int end)
-        {
-            HashSet<char> set = new HashSet<char>();
-            for (int i = start; i < end; i++)
-            {
-                var ch = s[i];
-                if (set.Contains(ch)) return false;
-                set.Add(ch);
-            }
-            return true;
-        }
-
-        private int DoOtherLengthOfLongestSubstring(string s)
-        {
-            int n = s.Length, ans = 0;
-            int[] index = new int[128]; // current index of character
-                                        // try to extend the range [i, j]
-            for (int j = 0, i = 0; j < n; j++)
-            {
-                i = Math.Max(index[s[j]], i);
-                ans = Math.Max(ans, j - i + 1);
-                index[s[j]] = j + 1;
-            }
-
-            return ans;
-        }
-
         public int DlengthOfLongestSubstring(string s)
         {
             int n = s.Length;
@@ -125,13 +81,14 @@ namespace Algorithms.LeetCode
                 // try to extend the range [i, j]
                 if (!set.Contains(s[j]))
                 {
-                    set.Add(s[j++]);
+                    set.Add(s[j]);
+                    j++;
                     ans = Math.Max(ans, j - i);
                 }
                 else
                 {
-                    
-                    set.Remove(s[i++]);
+                    set.Remove(s[i]);
+                    i++;
                 }
             }
 

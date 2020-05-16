@@ -20,8 +20,22 @@ namespace Algorithms
             //FirstMissingPositive();
             //TwoSum();
             //ShortestPalindrome();
-            LengthOfLongestSubstring();
+            //LengthOfLongestSubstring();
+            //FindMedianSortedArrays();
+            FindUnsortedSubarray();
             Console.ReadKey();
+        }
+
+        private static void FindUnsortedSubarray()
+        {
+            var c = new FindUnsortedSubarray();
+            c.Run();
+        }
+
+        private static void FindMedianSortedArrays()
+        {
+            var c = new FindMedianSortedArrays();
+            c.Run();
         }
 
         private static void LengthOfLongestSubstring()
