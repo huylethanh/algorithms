@@ -32,7 +32,6 @@ namespace Algorithms.LeetCode
             foreach (var item in inputs)
             {
                 var value = DlengthOfLongestSubstring(item);
-                //    output.Add($"'{item}' => '{value} length => {value.Length}'");
                 output.Add($"'{item}' => '{value}'");
             }
 
