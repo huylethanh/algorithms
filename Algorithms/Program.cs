@@ -19,8 +19,15 @@ namespace Algorithms
             //SingleNumber();
             //FirstMissingPositive();
             //TwoSum();
-            ShortestPalindrome();
+            //ShortestPalindrome();
+            LengthOfLongestSubstring();
             Console.ReadKey();
+        }
+
+        private static void LengthOfLongestSubstring()
+        {
+            var c = new LengthOfLongestSubstring();
+            c.Run();
         }
 
         private static void ShortestPalindrome()
