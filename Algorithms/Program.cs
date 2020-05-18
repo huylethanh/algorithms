@@ -21,8 +21,15 @@ namespace Algorithms
             //TwoSum();
             //ShortestPalindrome();
             //NumberSubsetWithProductLessThanK();
-            CombinationSum3();
+            //CombinationSum3();
+            PalindromePairs();
             Console.ReadKey();
+        }
+
+        private static void PalindromePairs()
+        {
+            var c = new PalindromePairs();
+            c.Run();
         }
 
         private static void CombinationSum3()
